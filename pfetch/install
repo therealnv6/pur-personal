@@ -1,0 +1,5 @@
+#!/bin/sh
+
+curl -L https://github.com/dylanaraps/pfetch/archive/refs/tags/0.6.0.tar.gz > data.tar.gz
+tar xvf *.tar.gz
+mv pfetch-0.6.0/pfetch $1/usr/bin/pfetch
