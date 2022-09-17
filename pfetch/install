@@ -7,6 +7,6 @@ tar xvf *.tar.gz
 cd pfetch-0.6.0
 
 # Apply patch to add the pur package manager
-git am < ../patches/0001-add-pur-package-manager.patch
+patch -p1 < $2/patches/0001-add-pur-package-manager.patch
 
 mv pfetch $1/usr/bin/pfetch
