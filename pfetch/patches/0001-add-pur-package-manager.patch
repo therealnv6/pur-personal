@@ -1,0 +1,24 @@
+From d0dc462e268a56df4b15baa98f809b241472544c Mon Sep 17 00:00:00 2001
+From: therealnv6 <devrawr@protonmail.com>
+Date: Fri, 16 Sep 2022 23:02:44 +0200
+Subject: [PATCH] add pur package manager
+
+---
+ pfetch | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/pfetch b/pfetch
+index d47b878..cb1af84 100755
+--- a/pfetch
++++ b/pfetch
+@@ -569,6 +569,7 @@ get_pkgs() {
+                 has bonsai     && bonsai list
+                 has crux       && pkginfo -i
+                 has pacman-key && pacman -Qq
++                has pur        && pur search --installed
+                 has dpkg       && dpkg-query -f '.\n' -W
+                 has rpm        && rpm -qa
+                 has xbps-query && xbps-query -l
+-- 
+2.35.1
+

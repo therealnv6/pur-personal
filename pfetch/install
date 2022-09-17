@@ -2,4 +2,11 @@
 
 curl -L https://github.com/dylanaraps/pfetch/archive/refs/tags/0.6.0.tar.gz > data.tar.gz
 tar xvf *.tar.gz
-mv pfetch-0.6.0/pfetch $1/usr/bin/pfetch
+
+# Change the directory to the pfetch repo
+cd pfetch-0.6.0
+
+# Apply patch to add the pur package manager
+git am < ../patches/0001-add-pur-package-manager.patch
+
+mv pfetch $1/usr/bin/pfetch
